@@ -21,7 +21,17 @@
         <h1> Age </h1>
         <input id="age" type="text" name="age" placeholder="Age">
         <br>
-        <input onclick="showData()" type="submit" id="button" id="display">
+
+        <div>
+        <h1>Profession</h1>
+        <select id="profession" name="Profession">
+        <option name="it" id="it">It</option>
+        <option name="hospitality" id="hos">Hospitality</option>
+        
+        </select>
+        </div>
+
+        <input type="button" id="button" value="submit">
     </div>
 
 
@@ -30,17 +40,16 @@
     <br>
     <br>
 
-    <div>
-        <h1>Proffesion</h1>
-        <select id="proffesion" name="Proffesion">
-        <option onclick="changeColor()" name="it" id="it">It</option>
-        <option onclick="changeColor()" name="hospitality" id="hos">Hospitality</option>
-        
-
-    </select>
-    </div>
+    
 
     <script>
+
+        var button = document.getElementById("button")
+        button.addEventListener('click', showData, false);
+        button.addEventListener('mouseover', function () {
+            console.log("my grandma")
+        }, false);
+
         function showData() {
             var firstName = document.getElementById("first_Name").value;
             var lastName = document.getElementById("last_Name").value;
@@ -64,14 +73,23 @@
                 document.querySelector("#lname").style.color = "red";
             }
 
+            var prof = document.getElementById("profession").value;
+            console.log(prof)
+
+
+            if (prof == "It") {
+                document.body.style.backgroundColor = "purple"
+            } else if (prof == "Hospitality") {
+                document.body.style.backgroundColor = "green"
+            } else {            
+                document.body.style.backgroundColor = "black"
+            }
 
         }
 
-        function changeColor() {
 
-
-        }
-    </script>
+                    
+         </script>
 </body>
 
 </html>
