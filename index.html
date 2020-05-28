@@ -27,6 +27,19 @@
 
     <div id="output"></div>
 
+    <br>
+    <br>
+
+    <div>
+        <h1>Proffesion</h1>
+        <select id="proffesion" name="Proffesion">
+        <option onclick="changeColor()" name="it" id="it">It</option>
+        <option onclick="changeColor()" name="hospitality" id="hos">Hospitality</option>
+        
+
+    </select>
+    </div>
+
     <script>
         function showData() {
             var firstName = document.getElementById("first_Name").value;
@@ -51,6 +64,10 @@
                 document.querySelector("#lname").style.color = "red";
             }
 
+
+        }
+
+        function changeColor() {
 
         }
     </script>
