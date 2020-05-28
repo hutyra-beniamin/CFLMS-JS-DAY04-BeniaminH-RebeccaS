@@ -35,18 +35,23 @@
 
             // var Data = document.getElementById('data')
             var text = `<p id="fname">First Name: ${firstName} </p> <p id="lname">Last Name: ${lastName} </p> <p> Age: ${age}</p>`;
+            document.getElementById("output").innerHTML = text;
+            //var name_leng = firstName.length;
+            //console.log(name_leng)
 
-            var name_leng = firstName.length;
-            console.log(name_leng)
-
-            if (name_leng > 5) {
-                document.querySelector("firstname").style.color = "green";
+            if (firstName.length > 5) {
+                document.querySelector("#fname").style.color = "green";
             } else {
-                document.querySelector("firstname").style.color = "red";
+                document.querySelectorAll("#fname")[0].style.color = "red";
+            }
+            //console.log(document.querySelectorAll('#fname'))
+            if (lastName.length > 5) {
+                document.querySelector("#lname").style.color = "green";
+            } else {
+                document.querySelector("#lname").style.color = "red";
             }
 
 
-            document.getElementById("output").innerHTML = text;
         }
     </script>
 </body>
