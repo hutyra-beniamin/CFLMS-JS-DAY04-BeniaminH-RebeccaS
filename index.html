@@ -4,11 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Javascript</title>
+    <style>
+
+    </style>
 </head>
 
 <body>
 
+
+    <div class="data">
+        <h1> First Name </h1>
+        <input id="first_Name" type="text" name="firstname" placeholder="First Name">
+        <h1> Last Name </h1>
+        <input id="last_Name" type="text" name="lastname" placeholder="Last Name">
+        <h1> Age </h1>
+        <input id="age" type="text" name="age" placeholder="Age">
+        <br>
+        <input onclick="showData()" type="submit" id="button" id="display">
+    </div>
+
+
+    <div id="output"></div>
+
+    <script>
+        function showData() {
+            var firstName = document.getElementById("first_Name").value;
+            var lastName = document.getElementById("last_Name").value;
+            var age = Number(document.getElementById("age").value);
+
+            // var Data = document.getElementById('data')
+            var text = `<p id="fname">First Name: ${firstName} </p> <p id="lname">Last Name: ${lastName} </p> <p> Age: ${age}</p>`;
+
+            var name_leng = firstName.length;
+            console.log(name_leng)
+
+            if (name_leng > 5) {
+                document.querySelector("firstname").style.color = "green";
+            } else {
+                document.querySelector("firstname").style.color = "red";
+            }
+
+
+            document.getElementById("output").innerHTML = text;
+        }
+    </script>
 </body>
 
 </html>
